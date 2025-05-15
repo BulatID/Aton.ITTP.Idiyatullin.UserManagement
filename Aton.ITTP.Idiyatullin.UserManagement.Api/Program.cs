@@ -38,7 +38,7 @@ builder.Services.AddSwaggerGen(options =>
         In = ParameterLocation.Header,
         Name = "X-Acting-User-Login",
         Type = SecuritySchemeType.ApiKey,
-        Description = "Логин пользователя, от имени которого выполняется действие."
+        Description = "Логин пользователя, от имени которого выполняется действие (введите admin)."
     });
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
