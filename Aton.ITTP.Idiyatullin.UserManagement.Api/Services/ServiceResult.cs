@@ -26,7 +26,17 @@
         /// </summary>
         public int StatusCode { get; }
 
-        // Конструктор приватный, используйте фабричные методы Success и Failure.
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="ServiceResult{T}"/> с указанными параметрами.
+        /// </summary>
+        /// <remarks>
+        /// Этот конструктор является приватным. Для создания экземпляров следует использовать
+        /// статические фабричные методы <see cref="Success(T, int)"/> и <see cref="Failure(string, int)"/>.
+        /// </remarks>
+        /// <param name="data">Данные результата операции. Может быть null.</param>
+        /// <param name="isSuccess">Значение, указывающее, успешно ли завершилась операция.</param>
+        /// <param name="errorMessage">Сообщение об ошибке, если операция не удалась. Может быть null.</param>
+        /// <param name="statusCode">HTTP-статус код, соответствующий результату операции.</param>
         private ServiceResult(T? data, bool isSuccess, string? errorMessage, int statusCode)
         {
             Data = data;
