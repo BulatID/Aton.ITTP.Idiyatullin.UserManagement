@@ -60,7 +60,6 @@ builder.Services.AddSwaggerGen(options =>
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 
-
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
